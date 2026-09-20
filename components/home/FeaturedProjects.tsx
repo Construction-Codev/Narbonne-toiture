@@ -152,12 +152,6 @@ export default function FeaturedProjects() {
             <ProjectCard project={projects[2]} />
           </div>
         </div>
-
-        {/* Mention temporaire */}
-        <p className="mt-5 text-xs leading-5 text-anthracite/40">
-          Visuels d&apos;illustration en attente des photographies des
-          réalisations.
-        </p>
       </div>
     </section>
   );
