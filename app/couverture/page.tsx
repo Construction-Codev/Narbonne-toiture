@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
 
-import CoverageHero from "@/components/services/CoverageHero";
-import CoverageSystem from "@/components/services/CoverageSystem";
-import CoverageWork from "@/components/services/CoverageWork";
-import CoverageDecision from "@/components/services/CoverageDecision";
-import CoverageGallery from "@/components/services/CoverageGallery";
-import CoverageLocalArea from "@/components/services/CoverageLocalArea";
-import CoverageFAQ from "@/components/services/CoverageFAQ";
+import CoverageHero from "@/components/services/Coverage/CoverageHero";
+import CoverageSystem from "@/components/services/Coverage/CoverageSystem";
+import CoverageWork from "@/components/services/Coverage/CoverageWork";
+import CoverageDecision from "@/components/services/Coverage/CoverageDecision";
+import CoverageGallery from "@/components/services/Coverage/CoverageGallery";
+import CoverageLocalArea from "@/components/services/Coverage/CoverageLocalArea";
+import CoverageFAQ from "@/components/services/Coverage/CoverageFAQ";
 
 
 const SITE_URL = "https://www.narbonnetoiture.fr";

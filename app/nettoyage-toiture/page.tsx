@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 import ServiceComparison from "@/components/services/ServiceComparison";
-import CleaningFAQ from "@/components/services/CleaningFAQ";
-import CleaningHero from "@/components/services/CleaningHero";
-import CleaningLocalArea from "@/components/services/CleaningLocalArea";
-import CleaningProcess from "@/components/services/CleaningProcess";
-import CleaningWhy from "@/components/services/CleaningWhy";
+import CleaningFAQ from "@/components/services/Cleaning/CleaningFAQ";
+import CleaningHero from "@/components/services/Cleaning/CleaningHero";
+import CleaningLocalArea from "@/components/services/Cleaning/CleaningLocalArea";
+import CleaningProcess from "@/components/services/Cleaning/CleaningProcess";
+import CleaningWhy from "@/components/services/Cleaning/CleaningWhy";
 
 const SITE_URL = "https://www.narbonnetoiture.fr";
 

@@ -8,7 +8,7 @@ import {
   Phone,
 } from "lucide-react";
 
-import Breadcrumb from "../ui/Breadcrumb";
+import Breadcrumb from "@/components/ui/Breadcrumb";
 export default function CoverageHero() {
   return (
     <section className="overflow-hidden bg-white">

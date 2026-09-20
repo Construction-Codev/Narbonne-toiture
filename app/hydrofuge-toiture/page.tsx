@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
-import HydrofugeFAQ from "@/components/services/HydrofugeFAQ";
-import HydrofugeFit from "@/components/services/HydrofugeFit";
-import HydrofugeHero from "@/components/services/HydrofugeHero";
-import HydrofugeLimits from "@/components/services/HydrofugeLimits";
-import HydrofugeLocalArea from "@/components/services/HydrofugeLocalArea";
-import HydrofugeUnderstanding from "@/components/services/HydrofugeUnderstanding";
+import HydrofugeFAQ from "@/components/services/Hydrofuge/HydrofugeFAQ";
+import HydrofugeFit from "@/components/services/Hydrofuge/HydrofugeFit";
+import HydrofugeHero from "@/components/services/Hydrofuge/HydrofugeHero";
+import HydrofugeLimits from "@/components/services/Hydrofuge/HydrofugeLimits";
+import HydrofugeLocalArea from "@/components/services/Hydrofuge/HydrofugeLocalArea";
+import HydrofugeUnderstanding from "@/components/services/Hydrofuge/HydrofugeUnderstanding";
 import ServiceComparison from "@/components/services/ServiceComparison";
 
 const SITE_URL = "https://www.narbonnetoiture.fr";

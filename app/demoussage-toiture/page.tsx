@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
-import MossHero from "@/components/services/MossHero";
-import MossWhy from "@/components/services/MossWhy";
-import MossSigns from "@/components/services/MossSigns";
-import MossProcess from "@/components/services/MossProcess";
+import MossHero from "@/components/services/Moss/MossHero";
+import MossWhy from "@/components/services/Moss/MossWhy";
+import MossSigns from "@/components/services/Moss/MossSigns";
+import MossProcess from "@/components/services/Moss/MossProcess";
 import ServiceComparison from "@/components/services/ServiceComparison";
-import MossLocalArea from "@/components/services/MossLocalArea";
+import MossLocalArea from "@/components/services/Moss/MossLocalArea";
 
-import MossFAQ from "@/components/services/MossFAQ";
+import MossFAQ from "@/components/services/Moss/MossFAQ";
 
 const SITE_URL = "https://www.narbonnetoiture.fr";
 

@@ -7,7 +7,7 @@ import {
   ShieldCheck,
 } from "lucide-react";
 
-import Breadcrumb from "../ui/Breadcrumb";
+import Breadcrumb from "@/components/ui/Breadcrumb";
 
 export default function HydrofugeHero() {
   return (
