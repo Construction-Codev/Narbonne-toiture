@@ -8,7 +8,7 @@ import {
   Phone,
 } from "lucide-react";
 
-import ServiceBreadcrumb from "./ServiceBreadcrumb";
+import Breadcrumb from "../ui/Breadcrumb";
 
 const benefits = [
   "Intervention ciblée sur mousses et lichens",
@@ -19,17 +19,19 @@ const benefits = [
 export default function MossHero() {
   return (
     <section className="overflow-hidden bg-ivory">
-      <div className="mx-auto max-w-7xl px-5 pt-6 sm:px-8 lg:px-10 lg:pt-8">
-        <ServiceBreadcrumb
+      <div className="mx-auto max-w-7xl px-5 pt-6 sm:px-8 lg:px-10 lg:pt-8">     
+        <Breadcrumb
           items={[
+            { label: "Accueil", href: "/" },
             { label: "Services", href: "/services" },
-            { label: "Démoussage de toiture" },
+            { label: "Démoussage toiture" },
           ]}
         />
+
       </div>
 
       <div className="mx-auto grid max-w-7xl lg:grid-cols-12">
-        <div className="px-5 pb-16 pt-12 sm:px-8 sm:pb-20 lg:col-span-7 lg:px-10 lg:pb-28 lg:pt-20">
+        <div className="px-5 pb-16 sm:px-8 sm:pb-20 lg:col-span-7 lg:px-10 lg:pb-28">
           <div className="flex items-center gap-2 text-terracotta">
             <MapPin size={15} aria-hidden="true" />
 

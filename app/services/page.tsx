@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Breadcrumb from "@/components/ui/Breadcrumb";
 import Link from "next/link";
 import {
   ArrowRight,
@@ -88,6 +89,7 @@ export default function ServicesPage() {
     <>
       {/* HERO */}
       <section className="relative overflow-hidden bg-ivory pb-20 pt-16 sm:pb-24 sm:pt-20 lg:pb-32 lg:pt-28">
+       
         <div
           className="pointer-events-none absolute right-[-5%] top-[-10%] select-none text-[28vw] font-black leading-none tracking-[-0.08em] text-anthracite/[0.025] lg:text-[18vw]"
           aria-hidden="true"
@@ -96,6 +98,12 @@ export default function ServicesPage() {
         </div>
 
         <div className="relative mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
+          <Breadcrumb
+            items={[
+              { label: "Accueil", href: "/" },
+              { label: "Services" },
+            ]}
+          />
           <div className="grid gap-12 lg:grid-cols-12 lg:items-end">
             <div className="lg:col-span-8">
               <p className="flex items-center gap-4 text-xs font-bold uppercase tracking-[0.22em] text-terracotta">

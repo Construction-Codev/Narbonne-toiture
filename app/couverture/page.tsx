@@ -5,6 +5,9 @@ import CoverageSystem from "@/components/services/CoverageSystem";
 import CoverageWork from "@/components/services/CoverageWork";
 import CoverageDecision from "@/components/services/CoverageDecision";
 import CoverageGallery from "@/components/services/CoverageGallery";
+import CoverageLocalArea from "@/components/services/CoverageLocalArea";
+import CoverageFAQ from "@/components/services/CoverageFAQ";
+
 
 const SITE_URL = "https://www.narbonnetoiture.fr";
 
@@ -91,19 +94,13 @@ export default function CouverturePage() {
           __html: JSON.stringify(breadcrumbSchema).replace(/</g, "\\u003c"),
         }}
       />
-
       <CoverageHero />
       <CoverageSystem />
       <CoverageWork />
       <CoverageDecision />
       <CoverageGallery />
-      {/*
-        À venir :
-        
-        <CoverageProjects />
-        <CoverageLocalArea />
-        <CoverageFAQ />
-      */}
+      <CoverageLocalArea />
+      <CoverageFAQ />
     </>
   );
 }

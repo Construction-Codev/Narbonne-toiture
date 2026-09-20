@@ -7,25 +7,21 @@ import {
   ShieldCheck,
 } from "lucide-react";
 
-import ServiceBreadcrumb from "@/components/services/ServiceBreadcrumb";
+import Breadcrumb from "../ui/Breadcrumb";
 
 export default function HydrofugeHero() {
   return (
     <section className="overflow-hidden bg-ivory">
       <div className="mx-auto max-w-7xl px-5 pb-16 pt-8 sm:px-6 sm:pb-20 lg:px-8 lg:pb-28 lg:pt-10">
-        <ServiceBreadcrumb
+        <Breadcrumb
           items={[
-            {
-              label: "Services",
-              href: "/services",
-            },
-            {
-              label: "Traitement hydrofuge",
-            },
+            { label: "Accueil", href: "/" },
+            { label: "Services", href: "/services" },
+            { label: "Hydrofuge toiture" },
           ]}
         />
 
-        <div className="mt-10 grid items-center gap-12 lg:grid-cols-[0.92fr_1.08fr] lg:gap-16">
+        <div className="grid items-center gap-12 lg:grid-cols-[0.92fr_1.08fr] lg:gap-16">
           {/* Contenu */}
           <div className="relative z-10">
             <span className="text-xs font-bold uppercase tracking-[0.24em] text-terracotta">

@@ -8,20 +8,19 @@ import {
   Phone,
 } from "lucide-react";
 
-import ServiceBreadcrumb from "@/components/services/ServiceBreadcrumb";
-
+import Breadcrumb from "../ui/Breadcrumb";
 export default function CoverageHero() {
   return (
     <section className="overflow-hidden bg-white">
-      <div className="mx-auto max-w-7xl px-5 pb-16 pt-8 sm:px-6 sm:pb-20 lg:px-8 lg:pb-28 lg:pt-10">
-        <ServiceBreadcrumb
+      <div className="mx-auto max-w-7xl px-5 pb-16 pt-8 sm:px-6 sm:pb-20 lg:px-8 lg:pb-28 lg:pt-10">      
+        <Breadcrumb
           items={[
+            { label: "Accueil", href: "/" },
             { label: "Services", href: "/services" },
             { label: "Couverture" },
           ]}
         />
-
-        <div className="mt-10">
+        <div>
           {/* Grande accroche */}
           <div className="relative z-10 grid gap-10 lg:grid-cols-[0.92fr_1.08fr] lg:items-end lg:gap-20">
             <div>

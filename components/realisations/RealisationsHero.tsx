@@ -1,10 +1,18 @@
 import Link from "next/link";
+import Breadcrumb from "../ui/Breadcrumb";
 import { ArrowDownRight, ArrowRight } from "lucide-react";
 
 export default function RealisationsHero() {
   return (
     <section className="relative overflow-hidden bg-anthracite text-white">
       <div className="mx-auto max-w-7xl px-5 pb-20 pt-14 sm:px-6 sm:pb-24 sm:pt-16 lg:px-8 lg:pb-32 lg:pt-20">
+        <Breadcrumb
+          theme="dark"
+          items={[
+            { label: "Accueil", href: "/" },
+            { label: "Réalisations" },
+          ]}
+        />
         <div className="grid gap-14 lg:grid-cols-[1.35fr_0.65fr] lg:items-end lg:gap-20">
           <div>
             <span className="text-xs font-bold uppercase tracking-[0.24em] text-terracotta-light">

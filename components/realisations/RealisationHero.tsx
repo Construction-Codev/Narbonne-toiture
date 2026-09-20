@@ -1,7 +1,6 @@
 import Image from "next/image";
-import Link from "next/link";
-import { ArrowLeft, MapPin } from "lucide-react";
-
+import { MapPin } from "lucide-react";
+import Breadcrumb from "../ui/Breadcrumb";
 import type { Realisation } from "@/data/realisations";
 
 type Props = {
@@ -11,18 +10,15 @@ type Props = {
 export default function RealisationHero({ realisation }: Props) {
   return (
     <section className="bg-anthracite text-white">
-      <div className="mx-auto max-w-7xl px-5 pb-10 pt-8 sm:px-6 lg:px-8">
-        <Link
-          href="/realisations"
-          className="group inline-flex items-center gap-3 text-xs font-bold uppercase tracking-[0.16em] text-white/55 transition hover:text-white"
-        >
-          <ArrowLeft
-            size={15}
-            className="transition-transform group-hover:-translate-x-1"
-            aria-hidden="true"
-          />
-          Toutes les réalisations
-        </Link>
+      <div className="mx-auto max-w-7xl px-5 pt-8 sm:px-6 lg:px-8">
+        <Breadcrumb
+            theme="dark"
+            items={[
+            { label: "Accueil", href: "/" },
+            { label: "Réalisations", href: "/realisations" },
+            { label: realisation.seoLocation },
+            ]}
+        />
       </div>
 
       <div className="mx-auto grid max-w-7xl lg:grid-cols-12">
