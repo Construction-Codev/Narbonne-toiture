@@ -43,7 +43,7 @@ export async function POST(request: Request) {
     const internalEmail = await resend.emails.send({
       from,
       to,
-      subject: `[Narbonne Toiture] Nouvelle demande — ${data.service} — ${data.city}`,
+      subject: `Narbonne Toiture Nouvelle demande — ${data.service} — ${data.city}`,
       react: ContactNotificationEmail({
         ...data,
         receivedAt,
