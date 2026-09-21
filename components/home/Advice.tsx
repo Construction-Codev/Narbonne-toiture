@@ -8,7 +8,7 @@ const articles = [
     title: "Quand faut-il démousser une toiture ?",
     description:
       "Mousses, lichens et dépôts peuvent progressivement s’installer sur une couverture. Découvrez les signes à observer et les moments où un entretien peut être envisagé.",
-    href: "/conseils/quand-demousser-toiture",
+    href: "/conseils/comment-enlever-mousse-toiture",
   },
   {
     number: "02",
@@ -16,7 +16,7 @@ const articles = [
     title: "À quoi sert un traitement hydrofuge ?",
     description:
       "Le traitement hydrofuge peut compléter l’entretien de certaines couvertures. Son intérêt dépend notamment du matériau et de l’état de la toiture.",
-    href: "/conseils/traitement-hydrofuge-toiture",
+   href: "/conseils/hydrofuge-toiture-a-quoi-ca-sert",
   },
   {
     number: "03",
@@ -24,7 +24,7 @@ const articles = [
     title: "Comment repérer une infiltration de toiture ?",
     description:
       "Traces d’humidité, auréoles ou éléments de couverture déplacés peuvent signaler un problème. Voici les principaux indices à surveiller.",
-    href: "/conseils/reperer-infiltration-toiture",
+    href: "/conseils/fuite-toiture-comment-trouver-origine",
   },
 ];
 

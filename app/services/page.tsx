@@ -17,7 +17,10 @@ export const metadata: Metadata = {
   title: "Services de toiture à Narbonne",
   description:
     "Découvrez les services de Narbonne Toiture : nettoyage, démoussage, hydrofuge, couverture, réparation, recherche de fuite, zinguerie et charpente à Narbonne et dans l’Aude.",
-};
+  alternates: {
+  canonical: "/services",
+},
+  };
 
 const entretienServices = [
   {

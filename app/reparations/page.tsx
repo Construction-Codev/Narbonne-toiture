@@ -11,7 +11,7 @@ import RepairFAQ from "@/components/reparations/RepairFAQ";
 const SITE_URL = "https://www.narbonnetoiture.fr";
 
 export const metadata: Metadata = {
-  title: "Réparation toiture Narbonne | Narbonne Toiture",
+  title: "Réparation toiture Narbonne",
   description:
     "Réparation de toiture à Narbonne et dans l’Aude : tuiles endommagées, couverture déplacée, raccords et réparations localisées. Demandez un devis.",
   alternates: {

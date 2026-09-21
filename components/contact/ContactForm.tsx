@@ -226,10 +226,17 @@ export default function ContactForm() {
                       : "Envoyer ma demande"}
                   </button>
 
-                  <p className="mt-4 max-w-lg text-xs leading-5 text-anthracite/45">
-                    Les informations transmises servent uniquement à répondre à
-                    votre demande de contact.
-                  </p>
+                  <p className="mt-4 max-w-xl text-xs leading-5 text-anthracite/45">
+                    Les informations transmises sont utilisées pour traiter votre demande.
+                    Pour en savoir plus sur leur utilisation et sur vos droits, consultez notre{" "}
+                    <a
+                        href="/confidentialite"
+                        className="font-semibold text-anthracite underline underline-offset-2"
+                    >
+                        politique de confidentialité
+                    </a>
+                    .
+                    </p>
                 </div>
               </form>
             )}

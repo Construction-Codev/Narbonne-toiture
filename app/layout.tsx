@@ -30,7 +30,7 @@ export const metadata: Metadata = {
   },
 
   description:
-    "Narbonne Toiture intervient pour le nettoyage, le démoussage, la protection et les travaux de toiture à Narbonne et dans les environs.",
+    "Narbonne Toiture intervient pour la couverture, la réparation, le nettoyage, le démoussage, l'hydrofuge, la zinguerie et la charpente à Narbonne et dans l'Aude.",
 
   applicationName: "Narbonne Toiture",
 
@@ -40,20 +40,78 @@ export const metadata: Metadata = {
     siteName: "Narbonne Toiture",
     title: "Couvreur à Narbonne | Narbonne Toiture",
     description:
-      "Nettoyage, démoussage, protection et travaux de toiture à Narbonne et dans les environs.",
+      "Travaux de couverture, réparation et entretien de toiture à Narbonne et dans l'Aude.",
+    url: SITE_URL,
   },
 
   twitter: {
     card: "summary_large_image",
     title: "Couvreur à Narbonne | Narbonne Toiture",
     description:
-      "Nettoyage, démoussage, protection et travaux de toiture à Narbonne et dans les environs.",
+      "Travaux de couverture, réparation et entretien de toiture à Narbonne et dans l'Aude.",
   },
 
   robots: {
     index: true,
     follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
   },
+};
+
+const businessJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "RoofingContractor",
+  "@id": `${SITE_URL}/#business`,
+  name: "Narbonne Toiture",
+  url: SITE_URL,
+  telephone: "+33662125611",
+  email: "contact@narbonnetoiture.fr",
+
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "88 Cami de Las Carretas",
+    postalCode: "66380",
+    addressLocality: "Pia",
+    addressCountry: "FR",
+  },
+
+  areaServed: {
+    "@type": "AdministrativeArea",
+    name: "Aude",
+  },
+
+  openingHoursSpecification: [
+    {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: [
+        "https://schema.org/Monday",
+        "https://schema.org/Tuesday",
+        "https://schema.org/Wednesday",
+        "https://schema.org/Thursday",
+        "https://schema.org/Friday",
+        "https://schema.org/Saturday",
+      ],
+      opens: "06:00",
+      closes: "20:00",
+    },
+  ],
+
+  knowsAbout: [
+    "Couverture",
+    "Réparation de toiture",
+    "Recherche de fuite",
+    "Nettoyage de toiture",
+    "Démoussage de toiture",
+    "Traitement hydrofuge",
+    "Zinguerie",
+    "Charpente",
+  ],
 };
 
 export default function RootLayout({
@@ -67,10 +125,18 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} antialiased`}
     >
       <body className="min-h-screen bg-white text-anthracite">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(businessJsonLd).replace(/</g, "\\u003c"),
+          }}
+        />
+
         <div className="flex min-h-screen flex-col">
           <Header />
 
           <main className="flex-1">{children}</main>
+
           <Footer />
         </div>
 

@@ -71,10 +71,6 @@ const legalLinks = [
     label: "Confidentialité",
     href: "/confidentialite",
   },
-  {
-    label: "Conditions générales",
-    href: "/conditions-generales",
-  },
 ];
 
 export default function Footer() {

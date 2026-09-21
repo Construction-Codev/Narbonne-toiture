@@ -8,7 +8,7 @@ import ContactHero from "@/components/contact/ContactHero";
 const SITE_URL = "https://www.narbonnetoiture.fr";
 
 export const metadata: Metadata = {
-  title: "Contact & devis toiture à Narbonne | Narbonne Toiture",
+  title: "Contact & devis toiture à Narbonne",
   description:
     "Contactez Narbonne Toiture pour votre projet de couverture, réparation, fuite, entretien, zinguerie ou charpente à Narbonne et dans l'Aude.",
   alternates: {
