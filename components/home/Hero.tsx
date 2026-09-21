@@ -1,11 +1,13 @@
 import Image from "next/image";
-import Link from "next/link";
 import {
   ArrowRight,
   Check,
   MapPin,
   Phone,
 } from "lucide-react";
+
+import TrackedAnchor from "@/components/analytics/TrackedAnchor";
+import TrackedLink from "@/components/analytics/TrackedLink";
 
 export default function Hero() {
   return (
@@ -65,8 +67,12 @@ export default function Hero() {
 
             {/* CTA */}
             <div className="mt-9 flex flex-col gap-3 sm:flex-row">
-              <Link
+              <TrackedLink
                 href="/contact"
+                eventName="quote_click"
+                eventData={{
+                  location: "hero",
+                }}
                 className="group inline-flex items-center justify-center gap-2 rounded-full bg-terracotta px-6 py-4 font-bold text-white transition hover:bg-terracotta-dark active:scale-[0.98]"
               >
                 Demander un devis
@@ -76,16 +82,20 @@ export default function Hero() {
                   aria-hidden="true"
                   className="transition-transform group-hover:translate-x-1"
                 />
-              </Link>
+              </TrackedLink>
 
-              <a
+              <TrackedAnchor
                 href="tel:+33662125611"
+                eventName="phone_click"
+                eventData={{
+                  location: "hero",
+                }}
                 aria-label="Appeler Narbonne Toiture au 06 62 12 56 11"
                 className="inline-flex items-center justify-center gap-2 rounded-full border border-anthracite/15 bg-white/60 px-6 py-4 font-bold text-anthracite transition hover:border-terracotta/40 hover:text-terracotta active:scale-[0.98]"
               >
                 <Phone size={18} aria-hidden="true" />
                 06 62 12 56 11
-              </a>
+              </TrackedAnchor>
             </div>
 
             {/* Signature */}

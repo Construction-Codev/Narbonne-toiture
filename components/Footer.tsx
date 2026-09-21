@@ -1,6 +1,9 @@
 import Link from "next/link";
 import { ArrowUpRight, Clock, MapPin, Phone } from "lucide-react";
 
+import TrackedAnchor from "@/components/analytics/TrackedAnchor";
+import TrackedLink from "@/components/analytics/TrackedLink";
+
 const priorityServices = [
   {
     label: "Nettoyage de toiture",
@@ -91,27 +94,35 @@ export default function Footer() {
 
               <p className="mt-5 max-w-xl text-base leading-7 text-white/65 sm:text-lg">
                 Entretien, protection, réparation ou travaux de couverture :
-                échangeons sur votre projet à Narbonne et dans les environs.
+                échangeons sur votre projet à Narbonne et dans l&apos;Aude.
               </p>
             </div>
 
             <div className="flex flex-col gap-3 sm:flex-row">
-              <a
+              <TrackedAnchor
                 href="tel:+33662125611"
+                eventName="phone_click"
+                eventData={{
+                  location: "footer",
+                }}
                 aria-label="Appeler Narbonne Toiture au 06 62 12 56 11"
                 className="inline-flex items-center justify-center gap-2 rounded-full border border-white/20 px-6 py-4 font-bold text-white transition hover:border-terracotta-light hover:text-terracotta-light active:scale-[0.98]"
               >
                 <Phone size={18} aria-hidden="true" />
                 06 62 12 56 11
-              </a>
+              </TrackedAnchor>
 
-              <Link
+              <TrackedLink
                 href="/contact"
+                eventName="quote_click"
+                eventData={{
+                  location: "footer",
+                }}
                 className="inline-flex items-center justify-center gap-2 rounded-full bg-terracotta px-6 py-4 font-bold text-white transition hover:bg-terracotta-light active:scale-[0.98]"
               >
                 Demander un devis
                 <ArrowUpRight size={18} aria-hidden="true" />
-              </Link>
+              </TrackedLink>
             </div>
           </div>
         </div>
@@ -160,7 +171,7 @@ export default function Footer() {
               <span>
                 Intervention à Narbonne
                 <br />
-                et dans les environs
+                et dans l&apos;Aude
               </span>
             </div>
 

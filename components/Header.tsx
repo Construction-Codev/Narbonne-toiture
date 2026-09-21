@@ -2,6 +2,8 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import TrackedAnchor from "@/components/analytics/TrackedAnchor";
+import TrackedLink from "@/components/analytics/TrackedLink";
 import { useEffect, useRef, useState } from "react";
 import { ChevronDown, Menu, Phone, X } from "lucide-react";
 
@@ -135,34 +137,34 @@ export default function Header() {
           </Link>
 
           {/* Services */}
-        <div ref={servicesRef} className="relative flex items-center">
+          <div ref={servicesRef} className="relative flex items-center">
             <Link
-                href="/services"
-                className="rounded-sm text-sm font-semibold text-anthracite transition-colors hover:text-terracotta focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-terracotta focus-visible:ring-offset-4"
+              href="/services"
+              className="rounded-sm text-sm font-semibold text-anthracite transition-colors hover:text-terracotta focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-terracotta focus-visible:ring-offset-4"
             >
-                Services
+              Services
             </Link>
 
             <button
-                type="button"
-                onClick={() => setServicesOpen((open) => !open)}
-                aria-label={
+              type="button"
+              onClick={() => setServicesOpen((open) => !open)}
+              aria-label={
                 servicesOpen
-                    ? "Fermer le menu des services"
-                    : "Ouvrir le menu des services"
-                }
-                aria-expanded={servicesOpen}
-                aria-haspopup="true"
-                className="ml-1 flex h-6 w-6 cursor-pointer items-center justify-center text-anthracite transition-colors hover:text-terracotta"
+                  ? "Fermer le menu des services"
+                  : "Ouvrir le menu des services"
+              }
+              aria-expanded={servicesOpen}
+              aria-haspopup="true"
+              className="ml-1 flex h-6 w-6 cursor-pointer items-center justify-center text-anthracite transition-colors hover:text-terracotta"
             >
-                <ChevronDown
+              <ChevronDown
                 size={15}
                 strokeWidth={2}
                 aria-hidden="true"
                 className={`transition-transform duration-200 ${
-                    servicesOpen ? "rotate-180" : ""
+                  servicesOpen ? "rotate-180" : ""
                 }`}
-                />
+              />
             </button>
 
             {servicesOpen && (
@@ -204,20 +206,28 @@ export default function Header() {
 
         {/* Actions desktop */}
         <div className="hidden items-center gap-3 xl:flex">
-          <a
+          <TrackedAnchor
             href="tel:+33662125611"
+            eventName="phone_click"
+            eventData={{
+              location: "header_desktop",
+            }}
             aria-label="Appeler Narbonne Toiture au 06 62 12 56 11"
             className="flex h-11 w-11 items-center justify-center rounded-full border border-border text-anthracite transition-colors hover:border-terracotta hover:text-terracotta focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-terracotta focus-visible:ring-offset-4"
           >
             <Phone size={18} aria-hidden="true" />
-          </a>
+          </TrackedAnchor>
 
-          <Link
+          <TrackedLink
             href="/contact"
+            eventName="quote_click"
+            eventData={{
+              location: "header_desktop",
+            }}
             className="rounded-full bg-terracotta px-5 py-3 text-sm font-bold text-white transition-colors hover:bg-terracotta-dark focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-terracotta focus-visible:ring-offset-4"
           >
             Demander un devis
-          </Link>
+          </TrackedLink>
         </div>
 
         {/* Bouton mobile */}
@@ -311,21 +321,30 @@ export default function Header() {
 
             {/* Actions */}
             <div className="mt-auto grid gap-3 pt-8">
-              <a
+              <TrackedAnchor
                 href="tel:+33662125611"
+                eventName="phone_click"
+                eventData={{
+                  location: "header_mobile",
+                }}
+                aria-label="Appeler Narbonne Toiture au 06 62 12 56 11"
                 className="flex items-center justify-center gap-2 rounded-full border border-anthracite px-5 py-4 font-bold text-anthracite transition active:scale-[0.98] active:border-terracotta active:text-terracotta"
               >
                 <Phone size={18} aria-hidden="true" />
                 06 62 12 56 11
-              </a>
+              </TrackedAnchor>
 
-              <Link
+              <TrackedLink
                 href="/contact"
+                eventName="quote_click"
+                eventData={{
+                  location: "header_mobile",
+                }}
                 onClick={closeMobileMenu}
                 className="rounded-full bg-terracotta px-5 py-4 text-center font-bold text-white transition active:scale-[0.98] active:bg-terracotta-dark"
               >
                 Demander un devis
-              </Link>
+              </TrackedLink>
             </div>
           </nav>
         </div>

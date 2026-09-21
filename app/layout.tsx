@@ -5,6 +5,7 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import MobileCTA from "@/components/MobileCTA";
 import "./globals.css";
 
 const SITE_URL = "https://www.narbonnetoiture.fr";
@@ -124,7 +125,7 @@ export default function RootLayout({
       lang="fr"
       className={`${geistSans.variable} ${geistMono.variable} antialiased`}
     >
-      <body className="min-h-screen bg-white text-anthracite">
+      <body className="min-h-screen bg-white pb-20 text-anthracite md:pb-0">
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -139,6 +140,8 @@ export default function RootLayout({
 
           <Footer />
         </div>
+
+        <MobileCTA />
 
         <Analytics />
         <SpeedInsights />

@@ -2,6 +2,7 @@
 
 import { FormEvent, useState } from "react";
 import { Check, LoaderCircle } from "lucide-react";
+import { track } from "@vercel/analytics";
 
 const services = [
   "Couverture",
@@ -48,6 +49,10 @@ export default function ContactForm() {
           result.error || "Impossible d'envoyer votre demande.",
         );
       }
+
+      track("contact_form_success", {
+        location: "contact_page",
+      });
 
       form.reset();
       setStatus("success");
@@ -218,7 +223,10 @@ export default function ContactForm() {
                     className="inline-flex min-h-12 items-center justify-center gap-2 bg-terracotta px-7 py-3.5 text-sm font-semibold text-white transition-colors hover:bg-terracotta-dark disabled:cursor-not-allowed disabled:opacity-60"
                   >
                     {status === "loading" && (
-                      <LoaderCircle className="h-4 w-4 animate-spin" />
+                      <LoaderCircle
+                        className="h-4 w-4 animate-spin"
+                        aria-hidden="true"
+                      />
                     )}
 
                     {status === "loading"
@@ -227,16 +235,17 @@ export default function ContactForm() {
                   </button>
 
                   <p className="mt-4 max-w-xl text-xs leading-5 text-anthracite/45">
-                    Les informations transmises sont utilisées pour traiter votre demande.
-                    Pour en savoir plus sur leur utilisation et sur vos droits, consultez notre{" "}
+                    Les informations transmises sont utilisées pour traiter
+                    votre demande. Pour en savoir plus sur leur utilisation et
+                    sur vos droits, consultez notre{" "}
                     <a
-                        href="/confidentialite"
-                        className="font-semibold text-anthracite underline underline-offset-2"
+                      href="/confidentialite"
+                      className="font-semibold text-anthracite underline underline-offset-2"
                     >
-                        politique de confidentialité
+                      politique de confidentialité
                     </a>
                     .
-                    </p>
+                  </p>
                 </div>
               </form>
             )}
@@ -262,6 +271,7 @@ function Field({
       <span className="mb-2 block text-sm font-medium text-anthracite">
         {label}
       </span>
+
       {children}
     </label>
   );
