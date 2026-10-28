@@ -3,6 +3,48 @@ import { ArrowUpRight, Clock, MapPin, Phone } from "lucide-react";
 
 import TrackedAnchor from "@/components/analytics/TrackedAnchor";
 import TrackedLink from "@/components/analytics/TrackedLink";
+import { SOCIAL_LINKS } from "@/lib/social";
+
+function FacebookIcon() {
+  return (
+    <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true">
+      <path d="M13.5 21v-7.5h2.5l.4-3h-2.9V8.6c0-.9.3-1.5 1.5-1.5h1.5V4.4c-.3 0-1.2-.1-2.2-.1-2.2 0-3.7 1.3-3.7 3.8v2.4H8v3h2.6V21h2.9Z" />
+    </svg>
+  );
+}
+
+function InstagramIcon() {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      width="18"
+      height="18"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden="true"
+    >
+      <rect x="3" y="3" width="18" height="18" rx="5" />
+      <circle cx="12" cy="12" r="4" />
+      <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" />
+    </svg>
+  );
+}
+
+const socialLinks = [
+  {
+    label: "Facebook",
+    href: SOCIAL_LINKS.facebook,
+    Icon: FacebookIcon,
+  },
+  {
+    label: "Instagram",
+    href: SOCIAL_LINKS.instagram,
+    Icon: InstagramIcon,
+  },
+];
 
 const priorityServices = [
   {
@@ -188,6 +230,22 @@ export default function Footer() {
                 <br />
                 6h00 – 20h00
               </span>
+            </div>
+
+            {/* Réseaux sociaux */}
+            <div className="mt-7 flex items-center gap-3">
+              {socialLinks.map(({ label, href, Icon }) => (
+                <a
+                  key={label}
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={`Narbonne Toiture sur ${label} (nouvel onglet)`}
+                  className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/20 text-white/70 transition hover:border-terracotta-light hover:text-terracotta-light"
+                >
+                  <Icon />
+                </a>
+              ))}
             </div>
           </div>
 
