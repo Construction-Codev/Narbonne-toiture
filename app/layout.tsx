@@ -5,6 +5,7 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { SOCIAL_LINKS } from "@/lib/social";
 import MobileCTA from "@/components/MobileCTA";
 import "./globals.css";
 
@@ -73,6 +74,7 @@ const businessJsonLd = {
   url: SITE_URL,
   telephone: "+33662125611",
   email: "contact@narbonnetoiture.fr",
+  sameAs: [SOCIAL_LINKS.facebook, SOCIAL_LINKS.instagram],
 
   address: {
     "@type": "PostalAddress",
